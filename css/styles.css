@@ -1,0 +1,272 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-nav {
+  background-color: #2d4a87;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.top-nav .left-links a,
+.top-nav .right-links a {
+  margin-right: 1px;
+}
+
+.right-links i {
+  margin-right: 0.3rem;
+}
+
+.main-nav {
+  background-color: white;
+  padding: 1rem 0;
+  border-bottom: 2px solid #2d4a87;
+}
+
+.main-nav .logo img {
+  height: 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #2d4a87;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #2d4a87;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+
+.search-bar .search-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  background-color: #2d4a87;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-bar .search-btn:hover {
+  background-color: #1d3570;
+}
+
+.how {
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.how h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+iframe {
+  width: 100%;
+  height: 315px; 
+  max-width: 100%;
+  border-radius: 8px; 
+  border: none; 
+}
+
+@media (max-width: 768px) {
+  .how {
+    padding: 15px; 
+  }
+  iframe {
+    height: 250px;
+  }
+}
+
+.schemes-page {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.schemes-page .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.schemes-page .text {
+  flex: 1;
+}
+
+.schemes-page .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schemes-page .image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; 
+}
+
+.schemes-page h3 {
+  font-size: 1.4rem;
+  color: #555;
+  margin-top: 20px;
+}
+
+.how {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+
+
+.how .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.how .iframe {
+  flex: 0 0 45%;
+}
+
+.how iframe {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.head{
+  background-image: url(/image/bg1.jpg);
+  text-align: center;
+  padding: 150px;
+  background-size:cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+
+}
+.buttoncontainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff5e6;
+  border: 2px solid #ffc107; 
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttoncontainer h3 {
+  font-size: 1.6rem;
+  color: #ff9800;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.buttoncontainer button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #ff5722; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttoncontainer button:hover {
+  background-color: #e64a19; 
+  transform: scale(1.05);
+}
+
+.buttoncontainer button:active {
+  transform: scale(1); 
+}

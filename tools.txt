@@ -1,0 +1,3 @@
+Routing: React Router for navigating between pages.
+API Integration: Axios or Fetch API for backend communication.
+Icons & Illustrations: Libraries like FontAwesome, HeroIcons, or unDraw for visuals

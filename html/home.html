@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyGovSchemeChecker</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="top-nav">
+    <div class="container">
+      <div class="left-links">
+        <a href="#"><i class="fas fa-home"></i>Home</a>
+      </div>
+      <div class="right-links">
+        <div class="dropdown">
+          <button class="dropdown-btn" onclick="toggleDropdown()">Select Languages ▼</button>
+          <div class="dropdown-content" id="dropdownMenu">
+            <a href="#">Tamil</a>
+            <a href="#">English</a>
+            <a href="#">Hindi</a>
+          </div>
+        </div>
+        
+        <script>
+          function toggleDropdown() {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+          }
+      
+          window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-btn')) {
+              const dropdowns = document.getElementsByClassName("dropdown-content");
+              for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.style.display === "block") {
+                  openDropdown.style.display = "none";
+                }
+              }
+            }
+          };
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-nav">
+    <div class="container">
+      <div class="logo">
+        <img src="/image/govlogo.png" alt="MyGov Logo">
+      </div>
+      
+      <div class="search-bar">
+        <input type="text" placeholder="Search for schemes..." id="searchInput">
+        <button class="search-btn"><i class="fas fa-search"></i> </button>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+  <div class="head">
+    <h1>Welcome to Our Page</h1>
+    <p>
+        Discover the future of online experience.
+    </p>
+    <button>Learn more</button>
+</div>
+<div class="buttoncontainer">
+    <h3>Upload your documents to check the available schemes for you</h3>
+    <button onclick="window.location.href='uploaddoc.html'">Go to Document Upload Page</button>
+</div>
+<div class="schemes-page">
+  <div class="content">
+    <div class="text">
+      <h2>Descriptions : </h2>
+      <h3>Explore Government Schemes Tailored for You </h3>
+      <p>
+        Welcome to the Schemes Page—your one-stop destination to discover government programs designed to improve your quality of life.
+      </p>
+      <h4>🔍 What You’ll Find Here:</h4>
+      <ul>
+        <li>A curated list of schemes categorized for easy navigation.</li>
+        <li>Detailed information about benefits, eligibility, and how to apply.</li>
+        <li>Simple language and regional translations for better understanding.</li>
+      </ul>
+      <h3>🚀 How We Help:</h3>
+      <ul>
+        <li><b>Personalized Suggestions:</b> Find schemes based on your needs and eligibility.</li>
+        <li><b>Easy Access:</b> View application steps and required documents all in one place.</li>
+        <li><b>Guided Process:</b> Start your application seamlessly with AI-powered assistance.</li>
+      </ul>
+      <p>
+        Empower yourself and your community by exploring opportunities that bring positive change. Let us simplify your journey to access the benefits you deserve!
+      </p>
+    </div>
+    <div class="image">
+      <img src="/image/ph1.jpg" alt="Government Schemes" />
+    </div>
+  </div>
+</div>
+<br>
+<div class="how">
+  <h3>How To Use..?</h3>
+  <p><h3>🎥 Watch the Video: How to Use This Web Platform</h3><br>
+    Tap on the video above to see a step-by-step guide on navigating our platform. Learn how to explore schemes, check eligibility, and submit applications effortlessly.</p>
+  <div class="iframe">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uLAIDIPpv9o?si=wh81m3gFKboLzVvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+</body>
+</html>

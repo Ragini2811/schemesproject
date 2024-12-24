@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <link rel="stylesheet" href="/css/vstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Information verification Form</h2>
+        <form action="#">
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+            </div>
+
+            <div class="form-group">
+                <label for="marital-status">Marital Status:</label>
+                <select id="marital-status" name="marital-status">
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State:</label>
+                <select id="state" name="state">
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Urban or Rural:</label>
+                <input type="radio" id="urban" name="area" value="Urban">
+                <label for="urban">Urban</label>
+                <input type="radio" id="rural" name="area" value="Rural">
+                <label for="rural">Rural</label>
+            </div>
+
+            <div class="form-group">
+                <label for="caste">Caste:</label>
+                <select id="caste" name="caste">
+                    <option value="General">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Differently Abled:</label>
+                <input type="radio" id="yes" name="differently-abled" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="differently-abled" value="No">
+                <label for="no">No</label>
+            </div>
+
+            <div class="form-group">
+                <label>Student:</label>
+                <input type="radio" id="student-yes" name="student" value="Yes">
+                <label for="student-yes">Yes</label>
+                <input type="radio" id="student-no" name="student" value="No">
+                <label for="student-no">No</label>
+            </div>
+
+            <div class="form-group">
+                <label for="income">Annual Income:</label>
+                <input type="number" id="income" name="income" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" onclick="window.location.href='schemes.html'">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

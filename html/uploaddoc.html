@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Documents</title>
+  <link rel="stylesheet" href="/css/ustyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="top-nav">
+    <div class="containerr">
+      <div class="left-links">
+        <a href="/html/home.html"><i class="fas fa-home"></i>Home</a>
+      </div>
+      <div class="right-links">
+        <div class="dropdown">
+          <button class="dropdown-btn" onclick="toggleDropdown()">Select Languages ▼</button>
+          <div class="dropdown-content" id="dropdownMenu">
+            <a href="#">Tamil</a>
+            <a href="#">English</a>
+            <a href="#">Hindi</a>
+          </div>
+        </div>
+        
+        <script>
+          function toggleDropdown() {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+          }
+      
+          window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-btn')) {
+              const dropdowns = document.getElementsByClassName("dropdown-content");
+              for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.style.display === "block") {
+                  openDropdown.style.display = "none";
+                }
+              }
+            }
+          };
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-nav">
+    <div class="containerr">
+      <div class="logo">
+        <img src="/image/govlogo.png" alt="MyGov Logo">
+      </div>
+      
+      <div class="search-bar">
+        <input type="text" placeholder="Search for schemes..." id="searchInput">
+        <button class="search-btn"><i class="fas fa-search"></i> </button>
+      </div>
+    
+    </div>
+  </div>
+  <div class="container">
+    <h1>Upload Your Documents</h1>
+
+    <div class="upload-section">
+      <label for="aadhar">Aadhaar Card:</label>
+      <input type="file" id="aadhar" accept="image/jpeg/png">
+    </div>
+    
+    <div class="upload-section">
+      <label for="community">Caste Certificate:</label>
+      <input type="file" id="community" accept="image/jpeg/png">
+    </div>
+
+    <div class="upload-section">
+      <label for="income">Income Certificate:</label>
+      <input type="file" id="income" accept="image/jpeg/png">
+    </div>
+
+    <button class="submit-button" type="submit" onclick="window.location.href='verifypage.html'">Upload</button>
+  </div>
+</body>
+</html>
