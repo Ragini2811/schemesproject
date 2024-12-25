@@ -17,7 +17,6 @@ a {
   justify-content: space-between;
 }
 
-/* Top Navigation Bar */
 .top-nav {
   background-color: #2d4a87;
   color: white;
@@ -34,7 +33,6 @@ a {
   margin-right: 0.3rem;
 }
 
-/* Main Navigation Bar */
 .main-nav {
   background-color: white;
   padding: 1rem 0;
@@ -71,7 +69,6 @@ a {
   overflow: hidden;
 }
 
-
 .dropdown-content a {
   color: black;
   padding: 10px 15px;
@@ -101,7 +98,6 @@ a {
   outline: none;
 }
 
-
 .search-bar .search-btn {
   padding: 10px 15px;
   font-size: 1rem;
@@ -119,22 +115,38 @@ a {
 .scheme-list {
   list-style-type: none;
   padding: 0;
+  margin-top: 20px;
 }
 
 .scheme-item {
   background: #f4f4f4;
-  margin: 5px 0;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 15px;
   border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
 }
 
 .scheme-item:hover {
   background: #e0e0e0;
 }
 
+.scheme-item a {
+  color: #2d4a87;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.scheme-item p {
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
 .hidden {
   display: none;
 }
+
 .sort-dropdown {
   position: relative;
   display: inline-block;

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-
     <div class="top-nav">
         <div class="container">
             <div class="left-links">
@@ -26,7 +25,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="main-nav">
         <div class="container">
@@ -49,12 +47,10 @@
         </div>
     </div>
 
-
     <div id="schemeListContainer">
         <h2>Schemes:</h2>
         <ul class="scheme-list" id="schemeList"></ul>
     </div>
-
 
     <script>
         const categories = [
@@ -62,7 +58,7 @@
                 id: 1,
                 name: 'Education',
                 schemes: [
-                    { id: 1, name: 'ICMR- Post Doctoral Fellowship', description: 'Advanced AI research funding.' },
+                    { id: 1, name: 'ICMR- Post Doctoral Fellowship', description: 'Advanced AI research funding.'},
                     { id: 2, name: 'Junior Research Fellowship (JRF)', description: 'Support for blockchain startups.' },
                     { id: 3, name: 'ICAR - Post Matric Scholarship', description: 'Scholarship for SC/ST candidates.' }
                 ]
@@ -71,45 +67,32 @@
                 id: 2,
                 name: 'Women & child welfare',
                 schemes: [
-                    { id: 1, name: 'Assistance For Delivery', description: 'Affordable health coverage.' },
+                    { id: 1, name: 'Assistance For Delivery', description: 'Affordable health coverage.', link: 'schemepage.html' },
                     { id: 2, name: 'Indira Gandhi Scholarship', description: 'Funding for single girl child.' },
-                    { id: 3, name: 'AICTE – Saksham Scholarship', description: 'Specially-abled student scholarship.' }
+                    { id: 3, name: 'AICTE – Saksham Scholarship', description: 'Specially-abled student scholarship.'}
                 ]
             },
             {
                 id: 3,
                 name: 'Agriculture',
                 schemes: [
-                    { id: 1, name: 'ICAR - Post Matric Scholarship', description: 'Scholarship for SC/ST candidates.' },
-                    { id: 2, name: 'Agri-Clinics Scheme', description: 'Support for agri-business centres.' },
+                    { id: 1, name: 'ICAR - Post Matric Scholarship', description: 'Scholarship for SC/ST candidates.'},
+                    { id: 2, name: 'Agri-Clinics Scheme', description: 'Support for agri-business centres.'},
                     { id: 3, name: 'Pradhan Mantri Krishi Yojana', description: 'Per drop more crop initiative.' }
                 ]
             }
         ];
-        function displayCategories() {
-            const categoryContainer = document.getElementById('categoryContainer');
-            categories.forEach(category => {
-                const div = document.createElement('div');
-                div.className = 'category';
-                div.innerHTML = `
-                    <img src="${category.logo || 'default-logo.png'}" alt="${category.name}" onclick="showSchemes(${category.id})">
-                    <div class="category-name">${category.name}</div>
-                `;
-                categoryContainer?.appendChild(div);
-            });
-        }
 
-    
         function displayAllSchemes() {
             const schemeList = document.getElementById('schemeList');
             const schemeListContainer = document.getElementById('schemeListContainer');
-            schemeList.innerHTML = ''; 
+            schemeList.innerHTML = '';
 
             categories.forEach(category => {
                 category.schemes.forEach(scheme => {
                     const li = document.createElement('li');
                     li.className = 'scheme-item';
-                    li.innerHTML = `<strong>${scheme.name}</strong><br><p>${scheme.description}</p>`;
+                    li.innerHTML = `<a href="${scheme.link}"><strong>${scheme.name}</strong></a><br><p>${scheme.description}</p>`;
                     schemeList.appendChild(li);
                 });
             });
@@ -117,28 +100,26 @@
             schemeListContainer.classList.remove('hidden');
         }
 
-        
         function filterSchemes(categoryName) {
             const schemeList = document.getElementById('schemeList');
             const schemeListContainer = document.getElementById('schemeListContainer');
-            schemeList.innerHTML = ''; 
+            schemeList.innerHTML = '';
 
             if (categoryName === 'all') {
-                displayAllSchemes(); 
+                displayAllSchemes();
             } else {
                 const selectedCategory = categories.find(category => category.name === categoryName);
                 selectedCategory.schemes.forEach(scheme => {
                     const li = document.createElement('li');
                     li.className = 'scheme-item';
-                    li.innerHTML = `<strong>${scheme.name}</strong><br><p>${scheme.description}</p>`;
+                    li.innerHTML = `<a href="${scheme.link}"><strong>${scheme.name}</strong></a><br><p>${scheme.description}</p>`;
                     schemeList.appendChild(li);
                 });
             }
 
-            schemeListContainer.classList.remove('hidden'); 
+            schemeListContainer.classList.remove('hidden');
         }
 
-    
         function toggleDropdown() {
             const dropdownMenu = document.getElementById("dropdownMenu");
             dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
@@ -149,12 +130,10 @@
             sortDropdownMenu.style.display = sortDropdownMenu.style.display === "block" ? "none" : "block";
         }
 
-        
         window.onload = function () {
-            displayAllSchemes(); 
+            displayAllSchemes();
         };
 
-        
         window.onclick = function (event) {
             if (!event.target.matches('.sort-btn')) {
                 const sortDropdowns = document.getElementsByClassName("sort-dropdown-content");
