@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistance For Delivery</title>
+    <link rel="stylesheet" href="/css/spstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="containerr">
+          <div class="left-links">
+            <a href="/html/home.html"><i class="fas fa-home"></i>Home</a>
+          </div>
+          <div class="right-links">
+            <div class="dropdown">
+              <button class="dropdown-btn" onclick="toggleDropdown()">Select Languages ▼</button>
+              <div class="dropdown-content" id="dropdownMenu">
+                <a href="#">Tamil</a>
+                <a href="#">English</a>
+                <a href="#">Hindi</a>
+              </div>
+            </div>
+            
+            <script>
+              function toggleDropdown() {
+                const dropdownMenu = document.getElementById("dropdownMenu");
+                dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+              }
+          
+              window.onclick = function (event) {
+                if (!event.target.matches('.dropdown-btn')) {
+                  const dropdowns = document.getElementsByClassName("dropdown-content");
+                  for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                      openDropdown.style.display = "none";
+                    }
+                  }
+                }
+              };
+            </script>
+          </div>
+        </div>
+      </div>
+    
+      <div class="main-nav">
+        <div class="containerr">
+          <div class="logo">
+            <img src="/image/govlogo.png" alt="MyGov Logo">
+          </div>
+          
+          <div class="search-bar">
+            <input type="text" placeholder="Search for schemes..." id="searchInput">
+            <button class="search-btn"><i class="fas fa-search"></i> </button>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Assistance For Delivery</h1>
+            <button onclick="toggleSpeech()"><i class="fas fa-volume-up"></i></button>
+        </div>
+
+        <section>
+            <h2 class="section-title">Scheme Details</h2>
+            <p>The Government of Tamil Nadu introduced "Assistance for Delivery/ Miscarriage of Pregnancy/ Termination of Pregnancy to Female Differently Abled Person with a sum of Rs.6,000/- @ Rs.1,000/- per month for delivery and Rs.3,000 for miscarriage/termination of pregnancy is given to female differently abled person. </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Eligibility Criteria</h2>
+            <ul>
+                <li>Differently abled person holding identity card issued by the welfare board for the differently abled.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Benefits</h2>
+            <ul>
+                <li>A sum of Rs.6,000/- @ Rs.1,000/- per month for delivery and Rs.3,000 for miscarriage/termination of pregnancy is given to a female differently abled person.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Documents Required</h2>
+            <ul>
+                <li>Copy of National Spouse Identity Card and Board Registration Details</li>
+                <li>Copy of Family Card </li>
+                <li>Copy of Aadhaar Card</li>
+                <li>For jump i) Child birth certificate copy ii) Hospital certificate copy</li>
+                <li>Certificate from the hospital where the operation was performed for abortion</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Application Process</h2>
+            <p>Follow these steps to apply for the scheme:</p>
+            <ol>
+                <li>Visit the official website or nearest center.</li>
+                <li>Fill out the application form with accurate details.</li>
+                <li>Submit the required documents.</li>
+                <li>Track your application status online or offline.</li>
+            </ol>
+        </section>
+
+        <footer>
+            <p>For any inquiries, contact us at <a href="mailto:sanjaysangsai@gmail.com">sanjaysangsai@gmail.com</a></p>
+        </footer>
+    </div>
+
+    <script>
+        let isSpeaking = false;
+        let utterance;
+
+        function toggleSpeech() {
+            if (isSpeaking) {
+                speechSynthesis.cancel();
+                isSpeaking = false;
+            } else {
+                const content = document.querySelector('.container').textContent;
+                utterance = new SpeechSynthesisUtterance(content);
+                speechSynthesis.speak(utterance);
+                isSpeaking = true;
+
+                utterance.onend = () => {
+                    isSpeaking = false;
+                };
+            }
+        }
+    </script>
+</body>
+</html>
